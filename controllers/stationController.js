@@ -45,15 +45,9 @@ const station_put = async (req, res) => {
     res.status(200).send(`Station ${req.body._id} updated`);
 };
 
-const station_delete = async (req, res) => {
-    const del = await stationModel.deleteOne({_id: req.params.id});
-    res.status(200).send(`Station with id ${req.params.id} was deleted`);
-};
-
 module.exports = {
     station_list_get,
     station_get,
     station_post,
     station_put,
-    station_delete,
 };
